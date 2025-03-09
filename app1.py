@@ -3,6 +3,7 @@ import folium
 from streamlit_folium import folium_static
 import numpy as np
 import pickle
+from streamlit_folium import st_folium
 
 
 from xgboost import XGBRegressor
