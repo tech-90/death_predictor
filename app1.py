@@ -3,11 +3,17 @@ import folium
 from streamlit_folium import folium_static
 import numpy as np
 import pickle
+
+
+from xgboost import XGBRegressor
 import os
 
-# ✅ Load model & vectorizer using relative paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model = pickle.load(open(os.path.join(BASE_DIR, 'model1.pkl'), 'rb'))
+model = XGBRegressor()
+model.load_model(os.path.join(BASE_DIR, 'model.json'))
+
+
+
 
 # Streamlit app
 st.title("COVID-19 Predictions Based on Location")
