@@ -37,13 +37,7 @@ if clicked_point and clicked_point.get("last_clicked"):
 
     # Predict based on clicked coordinates
     input_data = np.array([[lat, lon]])
-    predicted = model.predict(input_data)[0]
+    predicted = model.predict(input_data)
     
-    predicted_deaths = predicted[0]
-    predicted_cfr = predicted[1]
-    predicted_confirmed = predicted[2]
-
-    st.write("### Predictions:")
+    predicted_deaths = predicted
     st.write(f"- **Expected Deaths**: {predicted_deaths:.2f}")
-    st.write(f"- **Case Fatality Rate (CFR)**: {predicted_cfr:.2f}%")
-    st.write(f"- **Confirmed Cases**: {predicted_confirmed:.2f}")
