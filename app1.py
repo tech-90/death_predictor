@@ -40,4 +40,4 @@ if clicked_point and clicked_point.get("last_clicked"):
     predicted = model.predict(input_data)
     
     predicted_deaths = predicted
-    st.write(f"- **Expected Deaths**: {predicted_deaths:.2f}")
+    st.write(f"- **Expected Deaths**: {predicted_deaths}")
