@@ -31,7 +31,7 @@ Click on any location on the map to select coordinates.
 
 The app will predict expected deaths based on the selected location.
 
-###Model Information
+# **Model Information**
 The model is a K-Nearest Neighbors (KNN) regression model trained on geographic data.
 The trained model file (KNN_model.joblib) is required to make predictions.
 
