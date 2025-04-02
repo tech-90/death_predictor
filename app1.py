@@ -1,31 +1,27 @@
 import streamlit as st
 import folium
-from streamlit_folium import folium_static
+from streamlit_folium import folium_static, st_folium
 import numpy as np
-import pickle
-from streamlit_folium import st_folium
-
-
-from xgboost import XGBRegressor
 import os
+from joblib import load
+from sklearn.neighbors import KNeighborsRegressor  # Ensure KNN is used
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model = XGBRegressor()
-model.load_model(os.path.join(BASE_DIR, 'model.json'))
+# Load the KNN model
+BASE_DIR = os.getcwd()
+model_path = os.path.join(BASE_DIR, 'KNN_model.joblib')
 
-
-
+try:
+    model = load(model_path)
+except Exception as e:
+    st.error(f"Error loading model: {e}")
+    model = None
 
 # Streamlit app
-st.title("COVID-19 Predictions Based on Location")
+st.title("Virus Spread Predictions Based on Location")
 
-# Create map
+# Create and display map
 map = folium.Map(location=[20, 0], zoom_start=2)
-
-# Add click marker to the map
 map.add_child(folium.LatLngPopup())
-
-# Display map and capture click
 clicked_point = st_folium(map, width=700, height=450)
 
 if clicked_point and clicked_point.get("last_clicked"):
@@ -35,9 +31,12 @@ if clicked_point and clicked_point.get("last_clicked"):
     st.write(f"### Selected Coordinates:")
     st.write(f"Latitude: {lat}, Longitude: {lon}")
 
-    # Predict based on clicked coordinates
-    input_data = np.array([[lat, lon]])
-    predicted = model.predict(input_data)
-    
-    predicted_deaths = predicted
-    st.write(f"- **Expected Deaths**: {predicted_deaths}")
+    if model:
+        # Prepare input and make prediction
+        input_data = np.array([[lat, lon]])
+        predicted = model.predict(input_data)
+
+        st.write(f"- **Expected Deaths**: {predicted[0]}")
+    else:
+        st.warning("Model is not loaded. Please check the file path.")
+
