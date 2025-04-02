@@ -1,4 +1,4 @@
-readme_content = """\
+
 # **Virus Spread Prediction App (KNN Model)**  
 
 This Streamlit app predicts virus spread (expected deaths) based on selected geographic coordinates using a **K-Nearest Neighbors (KNN) model**.  
