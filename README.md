@@ -14,8 +14,42 @@ This Streamlit app predicts virus spread (expected deaths) based on selected geo
 ```bash
 git clone https://github.com/your-repo/virus-spread-knn.git
 cd virus-spread-knn
-
+```
 ### **Step 2:Install Dependencies**  
 ```bash
 pip install -r requirements.txt
+```
+Step 3: Run the App
+```bash
+streamlit run app.py
+```
 
+###Usage
+*Open the app in your browser after running the command.
+
+*Click on any location on the map to select coordinates.
+
+*The app will predict expected deaths based on the selected location.
+
+###Model Information
+*The model is a K-Nearest Neighbors (KNN) regression model trained on geographic data.
+*The trained model file (KNN_model.joblib) is required to make predictions.
+
+File Structure
+bash
+Copy
+Edit
+📂 virus-spread-knn
+│── app.py              # Main Streamlit app
+│── KNN_model.joblib    # Trained KNN model
+│── requirements.txt    # Dependencies
+│── README.md           # Documentation
+Troubleshooting
+If the model doesn’t load, check that KNN_model.joblib exists in the same directory as app.py.
+
+Ensure streamlit, scikit-learn, and joblib are installed.
+
+Author
+👨‍💻 Your Name
+📧 Contact: your.email@example.com
+"""
