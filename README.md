@@ -24,7 +24,7 @@ Step 3: Run the App
 streamlit run app.py
 ```
 
-###Usage
+# **Usage**
 *Open the app in your browser after running the command.
 
 *Click on any location on the map to select coordinates.
