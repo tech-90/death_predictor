@@ -25,31 +25,21 @@ streamlit run app.py
 ```
 
 # **Usage**
-*Open the app in your browser after running the command.
+Open the app in your browser after running the command.
 
-#Click on any location on the map to select coordinates.
+Click on any location on the map to select coordinates.
 
-#The app will predict expected deaths based on the selected location.
+The app will predict expected deaths based on the selected location.
 
 ###Model Information
-#The model is a K-Nearest Neighbors (KNN) regression model trained on geographic data.
-#The trained model file (KNN_model.joblib) is required to make predictions.
+The model is a K-Nearest Neighbors (KNN) regression model trained on geographic data.
+The trained model file (KNN_model.joblib) is required to make predictions.
 
-File Structure
-bash
-Copy
-Edit
+## File Structure
+```bash
 📂 virus-spread-knn
-│── app.py              # Main Streamlit app
-│── KNN_model.joblib    # Trained KNN model
-│── requirements.txt    # Dependencies
-│── README.md           # Documentation
-Troubleshooting
-If the model doesn’t load, check that KNN_model.joblib exists in the same directory as app.py.
-
-Ensure streamlit, scikit-learn, and joblib are installed.
-
-Author
-👨‍💻 Your Name
-📧 Contact: your.email@example.com
-"""
+├── app.py              # Main Streamlit app
+├── KNN_model.joblib    # Trained KNN model
+├── requirements.txt    # Dependencies
+└── README.md           # Documentation
+```
