@@ -43,3 +43,6 @@ The trained model file (KNN_model.joblib) is required to make predictions.
 ├── requirements.txt    # Dependencies
 └── README.md           # Documentation
 ```
+# **Virus Spread Prediction App (KNN Model)**  
+
+![App Screenshot](Screenshot.png)  
