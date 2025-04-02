@@ -37,11 +37,14 @@ The trained model file (KNN_model.joblib) is required to make predictions.
 
 ## File Structure
 ```bash
-📂 virus-spread-knn
-├── app.py              # Main Streamlit app
-├── KNN_model.joblib    # Trained KNN model
-├── requirements.txt    # Dependencies
-└── README.md           # Documentation
+📂 death_predictor
+│── app1.py                    # Main Streamlit app
+│── KNN_model.joblib            # Trained KNN model
+│── requirements.txt            # Dependencies
+│── README.md                   # Documentation
+│── Screenshot1.png             # Screenshot of the app
+│── train_data.xlsx - Sheet1.csv # Training data
+│── KNN_project.ipynb           # Jupyter Notebook for model training
 ```
 # **Virus Spread Prediction App (KNN Model)**  
 
