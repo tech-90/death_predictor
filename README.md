@@ -8,7 +8,7 @@ This Streamlit app predicts virus spread (expected deaths) based on selected geo
 ✅ Uses **KNN regression model** for predictions  
 ✅ Simple **Streamlit UI** for ease of use  
 ✅ **Error handling** for missing models  
-✅ **RMSE** is 40
+✅ **RMSE** is 40  
 ✅ **r2_score** is 0.42 
 
 ## **Installation**  
