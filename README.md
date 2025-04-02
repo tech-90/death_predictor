@@ -14,3 +14,7 @@ This Streamlit app predicts virus spread (expected deaths) based on selected geo
 ```bash
 git clone https://github.com/your-repo/virus-spread-knn.git
 cd virus-spread-knn
+### **Step 2:Install Dependencies**  
+```bash
+pip install -r requirements.txt
+cd virus-spread-knn
