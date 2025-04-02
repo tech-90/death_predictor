@@ -45,4 +45,4 @@ The trained model file (KNN_model.joblib) is required to make predictions.
 ```
 # **Virus Spread Prediction App (KNN Model)**  
 
-![App Screenshot](Screenshot.png)  
+![App Screenshot](Screenshot 1.png)  
