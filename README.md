@@ -21,7 +21,7 @@ cd virus-spread-knn
 ```bash
 pip install -r requirements.txt
 ```
-###Step 3: Run the App
+### **Step 3: Run the App**
 ```bash
 streamlit run app.py
 ```
